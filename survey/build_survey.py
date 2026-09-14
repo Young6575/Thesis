@@ -1,0 +1,142 @@
+#!/usr/bin/env python3
+"""설문지 배포본 생성기.
+
+item_bank.json 을 단일 원천(single source of truth)으로 삼아
+배포용 설문지 마크다운을 생성한다.
+
+문항을 수정할 때는 item_bank.json 만 고치고 이 스크립트를 다시 돌린다.
+    python3 survey/build_survey.py
+
+옵션:
+    --shuffle   척도 문항을 변수 블록 없이 무작위 배치 (공통방법편향 완화용)
+                재현성을 위해 --seed 로 난수 시드를 고정한다.
+"""
+import argparse
+import json
+import pathlib
+import random
+
+HERE = pathlib.Path(__file__).parent
+BANK = HERE / "item_bank.json"
+
+TITLE = "소방공무원의 통제위치가 안전시민행동에 미치는 영향에 관한 연구"
+
+CONSENT = """\
+## 연구 참여 안내 및 동의
+
+안녕하십니까.
+
+본 설문은 **소방공무원의 개인 특성(통제위치)이 안전시민행동에 미치는 영향**과,
+그 과정에서 **피드백 추구행동**, **지각된 실책관리풍토**, **직무경력**이 어떤 역할을 하는지
+알아보기 위한 박사학위논문 연구의 일환으로 실시됩니다.
+
+- 본 설문에는 **옳고 그른 답이 없습니다.** 평소 느끼시는 대로 솔직하게 응답해 주시면 됩니다.
+- 응답 내용은 **통계법 제33조**에 따라 익명으로 처리되며, **연구 목적 외에는 사용되지 않습니다.**
+- 개인을 식별할 수 있는 정보는 수집하지 않습니다.
+- 참여는 자발적이며, 응답 도중 언제든지 중단하실 수 있습니다.
+- 소요 시간은 약 **10~12분**입니다.
+
+바쁘신 중에도 시간을 내어 주셔서 진심으로 감사드립니다.
+
+> ☐ 위 내용을 이해하였으며, 연구 참여에 동의합니다.  **(동의하셔야 설문이 진행됩니다)**
+
+---
+"""
+
+DEMOGRAPHICS = """\
+## Ⅰ. 일반적 사항
+
+해당하는 곳에 표시해 주십시오.
+
+**Q1.** 귀하의 성별은?
+　① 남성　② 여성
+
+**Q2.** 귀하의 연령은?
+　① 20대　② 30대　③ 40대　④ 50대 이상
+
+**Q3.** 귀하의 계급은?
+　① 소방사　② 소방교　③ 소방장　④ 소방위　⑤ 소방경 이상
+
+**Q4.** 귀하의 주된 근무 분야는?
+　① 화재진압　② 구급　③ 구조　④ 기타( 　　　　　 )
+
+**Q5.** 귀하의 소방 분야 **총 근무경력**은 얼마입니까?
+　① 5년 이하　② 6년 ~ 15년　③ 16년 이상
+
+**Q6.** 귀하의 현재 근무 형태는?
+　① 3교대　② 2교대　③ 일근(주간)　④ 기타( 　　　　　 )
+
+**Q7.** 최근 1년간 귀하의 **월평균 출동 횟수**는?
+　① 10회 미만　② 10~29회　③ 30~49회　④ 50회 이상
+
+---
+"""
+
+LIKERT = """\
+> **응답 방법**  다음 문항들을 읽고 평소 생각과 가장 가까운 곳에 표시해 주십시오.
+>
+> | ① | ② | ③ | ④ | ⑤ |
+> |---|---|---|---|---|
+> | 전혀 그렇지 않다 | 그렇지 않다 | 보통이다 | 그렇다 | 매우 그렇다 |
+"""
+
+SECTIONS = [
+    ("LOC", "Ⅱ. 업무와 관련된 생각",
+     "다음은 **일과 직장에 대한 일반적인 생각**을 묻는 문항입니다."),
+    ("FSB", "Ⅲ. 업무 수행과 피드백",
+     "다음은 귀하가 **상사로부터 업무에 대한 피드백을 구하는 정도**를 묻는 문항입니다."),
+    ("EMC", "Ⅳ. 조직의 실수 관리 분위기",
+     "다음은 귀하가 **소속 조직의 실수(실책) 대응 분위기를 어떻게 지각하고 있는지**를 묻는 문항입니다."),
+    ("SCB", "Ⅴ. 안전과 관련된 행동",
+     "다음은 귀하가 **현장과 조직에서 안전을 위해 하는 행동**을 묻는 문항입니다."),
+]
+
+
+def build(shuffle: bool = False, seed: int = 20260914) -> str:
+    bank = json.loads(BANK.read_text(encoding="utf-8"))
+    items = bank["items"]
+
+    out = [f"# {TITLE}\n", "### 설문지 (배포본)\n", "---\n", CONSENT, DEMOGRAPHICS]
+
+    if shuffle:
+        scale_items = [i for i in items]
+        random.Random(seed).shuffle(scale_items)
+        out.append("## Ⅱ. 설문 문항\n")
+        out.append(LIKERT)
+        out.append(
+            f"\n> 문항 배치: 무작위 (공통방법편향 완화 목적, 난수 시드 `{seed}`)\n\n")
+        for n, it in enumerate(scale_items, 1):
+            out.append(f"**{n}.** {it['item_ko']}\n")
+            out.append("　① ② ③ ④ ⑤\n\n")
+    else:
+        for key, heading, lead in SECTIONS:
+            block = [i for i in items if i["var"] == key]
+            out.append(f"## {heading}\n")
+            out.append(f"{lead}\n\n")
+            out.append(LIKERT)
+            out.append("\n")
+            for it in block:
+                out.append(f"**{it['qid'][1:]}.** {it['item_ko']}\n")
+                out.append("　① ② ③ ④ ⑤\n\n")
+            out.append("---\n\n")
+
+    out.append("## 설문이 끝났습니다\n\n")
+    out.append("응답해 주셔서 진심으로 감사드립니다.\n")
+    out.append("귀하의 소중한 의견은 소방공무원의 현장 안전을 높이는 연구 자료로 활용하겠습니다.\n\n")
+    out.append("---\n\n")
+    out.append(
+        f"<sub>총 척도 {len(items)}문항 + 일반적 사항 7문항 · "
+        "5점 Likert · `survey/item_bank.json` 에서 자동 생성</sub>\n")
+    return "".join(out)
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--shuffle", action="store_true",
+                    help="척도 문항 무작위 배치 (공통방법편향 완화)")
+    ap.add_argument("--seed", type=int, default=20260914)
+    args = ap.parse_args()
+
+    name = "02_설문지_배포본_무작위.md" if args.shuffle else "02_설문지_배포본.md"
+    (HERE / name).write_text(build(args.shuffle, args.seed), encoding="utf-8")
+    print(f"생성 완료: survey/{name}")

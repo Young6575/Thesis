@@ -1,0 +1,16 @@
+# 설문 원자료 — 개인식별정보 포함 가능. 커밋 금지
+data/raw/
+data/**/*개인정보*
+*.sav
+*.amw
+
+# 분석 산출물
+analysis/output/
+*.Rhistory
+.Rproj.user/
+__pycache__/
+.venv/
+
+# 문서 임시파일
+~$*
+.DS_Store
