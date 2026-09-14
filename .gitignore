@@ -14,3 +14,4 @@ __pycache__/
 # 문서 임시파일
 ~$*
 .DS_Store
+citation_check_report.json
