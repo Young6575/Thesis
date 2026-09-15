@@ -87,9 +87,12 @@ SECTIONS = [
     ("LOC", "Ⅱ. 업무와 관련된 생각",
      "다음은 **일과 직장에 대한 일반적인 생각**을 묻는 문항입니다."),
     ("FSB", "Ⅲ. 업무 수행과 피드백",
-     "다음은 귀하가 **상사로부터 업무에 대한 피드백을 구하는 정도**를 묻는 문항입니다."),
+     "다음은 귀하가 **상사로부터 업무에 대한 피드백을 구하는 정도**를 묻는 문항입니다.\n"
+     "여기서 **상사**란 출동 현장에서 귀하가 직접 지휘를 받는 팀장 또는 선임을 의미합니다."),
     ("EMC", "Ⅳ. 조직의 실수 관리 분위기",
-     "다음은 귀하가 **소속 조직의 실수(실책) 대응 분위기를 어떻게 지각하고 있는지**를 묻는 문항입니다."),
+     "다음은 귀하가 **소속 조직(119안전센터·구조대·구급대 등 근무 단위)의**\n"
+     "**실수(실책) 대응 분위기를 어떻게 지각하고 있는지**를 묻는 문항입니다.\n"
+     "본인의 행동이 아니라 **조직의 분위기**에 대해 응답해 주십시오."),
     ("SCB", "Ⅴ. 안전과 관련된 행동",
      "다음은 귀하가 **현장과 조직에서 안전을 위해 하는 행동**을 묻는 문항입니다."),
 ]
@@ -118,15 +121,29 @@ def build(shuffle: bool = False, seed: int = 20260914,
     out = [f"# {TITLE}\n", f"### 설문지 ({label})\n", "---\n", CONSENT, demo]
 
     if shuffle:
-        scale_items = [i for i in items]
-        random.Random(seed).shuffle(scale_items)
-        out.append("## Ⅱ. 설문 문항\n")
-        out.append(LIKERT)
+        # ⚠️ 전면 무작위화는 쓰지 않는다.
+        # 섹션 지시문이 사라지면 실책관리풍토 문항이 지시대상(조직)을 잃고
+        # 개인 행동 자기보고로 읽힌다. "실수 경험을 다른 구성원들과 공유한다" 가
+        # 조직 분위기가 아니라 응답자 본인의 행동으로 해석되는 것이다.
+        # 그러면 조절변수가 조작적 정의('조직이 지원한다고 지각하는 정도')와
+        # 다른 것을 측정하게 되고, 매개변수(피드백추구)와 판별되지도 않는다.
+        # 따라서 무작위화는 **척도 블록 내부로 한정**하고 지시문은 유지한다.
+        rng = random.Random(seed)
         out.append(
-            f"\n> 문항 배치: 무작위 (공통방법편향 완화 목적, 난수 시드 `{seed}`)\n\n")
-        for n, it in enumerate(scale_items, 1):
-            out.append(f"**{n}.** {it['item_ko']}\n")
-            out.append("　① ② ③ ④ ⑤\n\n")
+            f"> 문항 배치: 척도 블록 내부 무작위 (난수 시드 `{seed}`).\n"
+            "> 블록 순서와 섹션 지시문은 유지한다 — 지시문이 사라지면 조직 수준\n"
+            "> 문항이 개인 행동 문항으로 읽혀 변수의 의미가 달라지기 때문이다.\n\n")
+        for key, heading, lead in SECTIONS:
+            block = [i for i in items if i["var"] == key]
+            rng.shuffle(block)
+            out.append(f"## {heading}\n")
+            out.append(f"{lead}\n\n")
+            out.append(LIKERT)
+            out.append("\n")
+            for n, it in enumerate(block, 1):
+                out.append(f"**{n}.** {it['item_ko']}\n")
+                out.append("　① ② ③ ④ ⑤\n\n")
+            out.append("---\n\n")
     else:
         for key, heading, lead in SECTIONS:
             block = [i for i in items if i["var"] == key]
