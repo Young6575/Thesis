@@ -10,6 +10,9 @@ item_bank.json 을 단일 원천(single source of truth)으로 삼아
 옵션:
     --shuffle   척도 문항을 변수 블록 없이 무작위 배치 (공통방법편향 완화용)
                 재현성을 위해 --seed 로 난수 시드를 고정한다.
+    --with-proposed
+                교수님 검토 대기 중인 제안 문항(마커변수·소속코드·경력 연속형)을
+                포함한 검토용 설문지를 생성한다. 확정본에는 포함되지 않는다.
 """
 import argparse
 import json
@@ -92,11 +95,27 @@ SECTIONS = [
 ]
 
 
-def build(shuffle: bool = False, seed: int = 20260914) -> str:
+def build(shuffle: bool = False, seed: int = 20260914,
+          with_proposed: bool = False) -> str:
     bank = json.loads(BANK.read_text(encoding="utf-8"))
     items = bank["items"]
+    proposed = bank.get("proposed_items", []) if with_proposed else []
 
-    out = [f"# {TITLE}\n", "### 설문지 (배포본)\n", "---\n", CONSENT, DEMOGRAPHICS]
+    label = "검토용 (제안 문항 포함)" if with_proposed else "배포본"
+    demo = DEMOGRAPHICS
+    if with_proposed:
+        # 경력 연속형 병기와 소속 식별 문항은 일반적 사항 절에 들어간다
+        q5b = next((i for i in proposed if i["qid"] == "Q5b"), None)
+        d8 = next((i for i in proposed if i["qid"] == "D8"), None)
+        if q5b:
+            demo = demo.replace(
+                "　① 5년 이하　② 6년 ~ 15년　③ 16년 이상",
+                "　① 5년 이하　② 6년 ~ 15년　③ 16년 이상\n\n"
+                "**Q5-1.** 〔제안〕" + q5b["item_ko"])
+        if d8:
+            demo = demo.replace("---\n", "**Q8.** 〔제안〕" + d8["item_ko"] + "\n\n---\n")
+
+    out = [f"# {TITLE}\n", f"### 설문지 ({label})\n", "---\n", CONSENT, demo]
 
     if shuffle:
         scale_items = [i for i in items]
@@ -120,6 +139,21 @@ def build(shuffle: bool = False, seed: int = 20260914) -> str:
                 out.append("　① ② ③ ④ ⑤\n\n")
             out.append("---\n\n")
 
+    if proposed:
+        markers = [i for i in proposed if i["var"] == "MARKER"]
+        if markers:
+            out.append("## 〔제안〕 Ⅵ. 일반적인 선호\n")
+            out.append("다음은 일상적인 선호를 묻는 문항입니다.\n\n")
+            out.append(LIKERT)
+            out.append("\n")
+            for it in markers:
+                out.append(f"**{it['qid']}.** {it['item_ko']}\n")
+                out.append("　① ② ③ ④ ⑤\n\n")
+            out.append("> 이 문항들은 공통방법편향(CMV)의 통계적 통제를 위한 "
+                       "**마커변수**입니다. 연구 변수와 이론적으로 무관해야 하므로 "
+                       "의도적으로 연구 주제와 동떨어진 내용으로 구성되었습니다.\n\n")
+            out.append("---\n\n")
+
     out.append("## 설문이 끝났습니다\n\n")
     out.append("응답해 주셔서 진심으로 감사드립니다.\n")
     out.append("귀하의 소중한 의견은 소방공무원의 현장 안전을 높이는 연구 자료로 활용하겠습니다.\n\n")
@@ -135,8 +169,16 @@ if __name__ == "__main__":
     ap.add_argument("--shuffle", action="store_true",
                     help="척도 문항 무작위 배치 (공통방법편향 완화)")
     ap.add_argument("--seed", type=int, default=20260914)
+    ap.add_argument("--with-proposed", action="store_true",
+                    help="교수님 검토 대기 중인 제안 문항 포함")
     args = ap.parse_args()
 
-    name = "02_설문지_배포본_무작위.md" if args.shuffle else "02_설문지_배포본.md"
-    (HERE / name).write_text(build(args.shuffle, args.seed), encoding="utf-8")
+    if args.with_proposed:
+        name = "03_설문지_검토용_제안문항포함.md"
+    elif args.shuffle:
+        name = "02_설문지_배포본_무작위.md"
+    else:
+        name = "02_설문지_배포본.md"
+    (HERE / name).write_text(
+        build(args.shuffle, args.seed, args.with_proposed), encoding="utf-8")
     print(f"생성 완료: survey/{name}")
