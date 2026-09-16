@@ -16,6 +16,35 @@ import html
 import pathlib
 import re
 
+# 응답 보기 줄 (① ② ③ …) 판정
+ANSWER = re.compile(r"^[\s\u3000]*[①②③④⑤⑥⑦⑧⑨⑩]")
+
+
+def is_block(ln: str) -> bool:
+    """문단에 이어 붙이면 안 되는 줄인가."""
+    return bool(
+        ln.startswith("```") or ln.startswith("|") or ln.startswith(">")
+        or re.match(r"^#{1,6}\s+", ln) or re.match(r"^-{3,}$", ln.strip())
+        or re.match(r"^\s*[-*]\s+", ln) or re.match(r"^\s*\d+\.\s+", ln)
+        or ANSWER.match(ln) or re.match(r"^\s*</?\w+[^>]*>\s*$", ln)
+    )
+
+
+def take_list(lines, i, marker):
+    """목록 한 덩어리를 읽는다. 들여쓴 다음 줄은 앞 항목에 이어 붙인다."""
+    items, j = [], i
+    while j < len(lines):
+        m = re.match(marker + r"(.*)", lines[j])
+        if m:
+            items.append(m.group(1).strip()); j += 1
+        elif (items and lines[j].strip() and re.match(r"^\s+\S", lines[j])
+                and not is_block(lines[j])):
+            items[-1] += " " + lines[j].strip(); j += 1
+        else:
+            break
+    return items, j
+
+
 CSS = """
 :root{--fg:#1a1a1a;--muted:#5c5c5c;--line:#e0ddd6;--bg:#fdfcfa;--accent:#8b5e34;
       --mark:#fff8e6;--markline:#e8c97a}
@@ -94,21 +123,25 @@ def md2html(md: str) -> str:
             out.append("<hr>"); i += 1; continue
         # 번호 목록
         if re.match(r"^\s*\d+\.\s+", ln):
-            buf, j = [], i
-            while j < len(lines) and re.match(r"^\s*\d+\.\s+", lines[j]):
-                buf.append(re.sub(r"^\s*\d+\.\s+", "", lines[j])); j += 1
+            buf, j = take_list(lines, i, r"^\s*\d+\.\s+")
             out.append("<ol>" + "".join(f"<li>{inline(b)}</li>" for b in buf) + "</ol>")
             i = j; continue
         # 목록
         if re.match(r"^\s*[-*]\s+", ln):
-            buf, j = [], i
-            while j < len(lines) and re.match(r"^\s*[-*]\s+", lines[j]):
-                buf.append(re.sub(r"^\s*[-*]\s+", "", lines[j])); j += 1
+            buf, j = take_list(lines, i, r"^\s*[-*]\s+")
             out.append("<ul>" + "".join(f"<li>{inline(b)}</li>" for b in buf) + "</ul>")
             i = j; continue
+        # 응답 보기 줄 (① ② ③ …) 은 본문과 합치지 않고 따로 세운다
+        if ANSWER.match(ln):
+            out.append(f'<p class="likert">{inline(ln.strip())}</p>'); i += 1; continue
+        # 문단 — 빈 줄이 나올 때까지 한 문단으로 합친다.
+        # 원문의 줄바꿈은 편집상 줄바꿈이지 문단 구분이 아니다.
         if ln.strip():
-            cls = ' class="likert"' if ln.strip().startswith("① ② ③") or "　① ② ③" in ln else ""
-            out.append(f"<p{cls}>{inline(ln)}</p>")
+            buf, j = [ln.strip()], i + 1
+            while j < len(lines) and lines[j].strip() and not is_block(lines[j]):
+                buf.append(lines[j].strip()); j += 1
+            out.append(f"<p>{inline(' '.join(buf))}</p>")
+            i = j; continue
         i += 1
     return "\n".join(out)
 
