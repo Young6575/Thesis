@@ -83,6 +83,19 @@ LIKERT = """\
 > | 전혀 그렇지 않다 | 그렇지 않다 | 보통이다 | 그렇다 | 매우 그렇다 |
 """
 
+# 안전시민행동은 원척도(Hofmann et al., 2003)에 맞추어 빈도형으로 측정한다.
+# 태도가 아니라 '행동을 얼마나 자주 하는가'를 재는 개념이기 때문이다.
+LIKERT_FREQ = """\
+> **응답 방법**  **최근 1년간** 귀하가 실제로 **얼마나 자주** 하셨는지 표시해 주십시오.
+>
+> | ① | ② | ③ | ④ | ⑤ |
+> |---|---|---|---|---|
+> | 전혀 하지 않는다 | 드물게 한다 | 가끔 한다 | 자주 한다 | 항상 한다 |
+"""
+
+# 척도별 응답 형식
+SCALE_ANCHOR = {"SCB": LIKERT_FREQ}
+
 SECTIONS = [
     ("LOC", "Ⅱ. 업무와 관련된 생각",
      "다음은 **일과 직장에 대한 일반적인 생각**을 묻는 문항입니다."),
@@ -94,7 +107,9 @@ SECTIONS = [
      "**실수(실책) 대응 분위기를 어떻게 지각하고 있는지**를 묻는 문항입니다.\n"
      "본인의 행동이 아니라 **조직의 분위기**에 대해 응답해 주십시오."),
     ("SCB", "Ⅴ. 안전과 관련된 행동",
-     "다음은 귀하가 **현장과 조직에서 안전을 위해 하는 행동**을 묻는 문항입니다."),
+     "다음은 귀하가 **현장과 조직에서 안전을 위해 하는 행동**을 묻는 문항입니다.\n"
+     "**이 부분은 앞과 응답 방식이 다릅니다.** 그렇게 생각하는지가 아니라,\n"
+     "**실제로 얼마나 자주 하시는지**를 표시해 주십시오."),
 ]
 
 
@@ -138,7 +153,7 @@ def build(shuffle: bool = False, seed: int = 20260914,
             rng.shuffle(block)
             out.append(f"## {heading}\n")
             out.append(f"{lead}\n\n")
-            out.append(LIKERT)
+            out.append(SCALE_ANCHOR.get(key, LIKERT))
             out.append("\n")
             for n, it in enumerate(block, 1):
                 out.append(f"**{n}.** {it['item_ko']}\n")
@@ -149,7 +164,7 @@ def build(shuffle: bool = False, seed: int = 20260914,
             block = [i for i in items if i["var"] == key]
             out.append(f"## {heading}\n")
             out.append(f"{lead}\n\n")
-            out.append(LIKERT)
+            out.append(SCALE_ANCHOR.get(key, LIKERT))
             out.append("\n")
             for it in block:
                 out.append(f"**{it['qid'][1:]}.** {it['item_ko']}\n")
@@ -196,7 +211,9 @@ def build(shuffle: bool = False, seed: int = 20260914,
     out.append("---\n\n")
     out.append(
         f"<sub>총 척도 {len(items)}문항 + 일반적 사항 7문항 · "
-        "5점 Likert · `survey/item_bank.json` 에서 자동 생성</sub>\n")
+        "통제위치·피드백추구·실책관리풍토는 5점 동의형, "
+        "안전시민행동은 5점 빈도형 · "
+        "`survey/item_bank.json` 에서 자동 생성</sub>\n")
     return "".join(out)
 
 

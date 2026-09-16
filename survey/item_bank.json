@@ -13,7 +13,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "1",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q9",
@@ -26,7 +28,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "2",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q10",
@@ -39,7 +43,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "3",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q11",
@@ -52,7 +58,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "4",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q12",
@@ -65,7 +73,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "5",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q13",
@@ -78,7 +88,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "6",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q14",
@@ -91,7 +103,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "7",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q15",
@@ -105,7 +119,9 @@
       "source": "Spector (1988) WLCS",
       "orig_no": "8",
       "status": "확정",
-      "item_ko_이전": "정말 좋은 직장(자리)을 얻으려면 고위 인사와 아는 사이(배경)가 되어야 한다."
+      "item_ko_이전": "정말 좋은 직장(자리)을 얻으려면 고위 인사와 아는 사이(배경)가 되어야 한다.",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q16",
@@ -118,7 +134,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "9",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q17",
@@ -132,7 +150,9 @@
       "source": "Spector (1988) WLCS",
       "orig_no": "10",
       "status": "확정",
-      "item_ko_이전": "좋은 직장(자리)을 얻는 데는 무엇을 아느냐(실력)보다 누구를 아느냐(인맥)가 더 중요하다."
+      "item_ko_이전": "좋은 직장(자리)을 얻는 데는 무엇을 아느냐(실력)보다 누구를 아느냐(인맥)가 더 중요하다.",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q18",
@@ -145,7 +165,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "11",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q19",
@@ -159,7 +181,9 @@
       "source": "Spector (1988) WLCS",
       "orig_no": "12",
       "status": "확정",
-      "item_ko_이전": "큰돈을 버는 것은 옳은 사람(인맥)을 알고 있어야 가능하다."
+      "item_ko_이전": "큰돈을 버는 것은 옳은 사람(인맥)을 알고 있어야 가능하다.",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q20",
@@ -173,7 +197,9 @@
       "source": "Spector (1988) WLCS",
       "orig_no": "13",
       "status": "확정",
-      "item_ko_이전": "대부분의 일에서 뛰어난 구성원이 되기는 많은 운이 필요하다."
+      "item_ko_이전": "대부분의 일에서 뛰어난 구성원이 되기는 많은 운이 필요하다.",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q21",
@@ -186,7 +212,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "14",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q22",
@@ -200,7 +228,9 @@
       "source": "Spector (1988) WLCS",
       "orig_no": "15",
       "status": "확정",
-      "item_ko_이전": "대부분의 구성원은 생각하는 것보다 상사에게 더 큰 영향력을 행사할 수 있다."
+      "item_ko_이전": "대부분의 구성원은 생각하는 것보다 상사에게 더 큰 영향력을 행사할 수 있다.",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q23",
@@ -213,7 +243,9 @@
       "scoring": "정채점",
       "source": "Spector (1988) WLCS",
       "orig_no": "16",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q24",
@@ -226,7 +258,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q25",
@@ -239,7 +273,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q26",
@@ -252,7 +288,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q27",
@@ -265,7 +303,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q28",
@@ -278,7 +318,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q29",
@@ -291,7 +333,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q30",
@@ -304,7 +348,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q31",
@@ -317,7 +363,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q32",
@@ -330,7 +378,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q33",
@@ -343,7 +393,9 @@
       "scoring": "정채점",
       "source": "Ashford & Tsui (1991) 기반 수정·보완",
       "orig_no": "",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q34",
@@ -356,7 +408,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "실책 공유",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q35",
@@ -369,7 +423,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "실책 학습",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q36",
@@ -382,7 +438,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "실책 활용",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q37",
@@ -395,7 +453,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "실책 보고",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q38",
@@ -408,7 +468,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "실책 분석",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q39",
@@ -421,7 +483,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "실책 공유",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q40",
@@ -434,7 +498,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "조직 피드백",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q41",
@@ -447,7 +513,9 @@
       "scoring": "정채점",
       "source": "van Dyck, Frese, Baer & Sonnentag (2005) 축약",
       "orig_no": "실책 활용",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "동의형",
+      "anchors": "① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다"
     },
     {
       "qid": "Q42",
@@ -460,7 +528,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Helping (6문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q43",
@@ -473,7 +543,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Helping (6문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q44",
@@ -486,7 +558,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Voice (4문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q45",
@@ -499,7 +573,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Voice (4문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q46",
@@ -512,7 +588,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Stewardship (5문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q47",
@@ -525,7 +603,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Stewardship (5문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q48",
@@ -538,7 +618,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Whistleblowing (5문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q49",
@@ -551,7 +633,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Whistleblowing (5문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q50",
@@ -564,7 +648,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Civic Virtue (3문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q51",
@@ -577,7 +663,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Civic Virtue (3문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q52",
@@ -590,7 +678,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Init. Change (4문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     },
     {
       "qid": "Q53",
@@ -603,7 +693,9 @@
       "scoring": "정채점",
       "source": "Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",
       "orig_no": "Init. Change (4문항 중)",
-      "status": "확정"
+      "status": "확정",
+      "response_format": "빈도형",
+      "anchors": "① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다"
     }
   ],
   "proposed_items": [
@@ -616,7 +708,8 @@
       "item_ko": "나는 파란색 계열의 색을 좋아한다.",
       "scoring": "정채점",
       "source": "색채 선호 마커변수 (연구변수와 이론적 무관)",
-      "status": "제안"
+      "status": "제안",
+      "response_format": "동의형"
     },
     {
       "qid": "M2",
@@ -627,7 +720,8 @@
       "item_ko": "파란색은 보기에 편안한 색이다.",
       "scoring": "정채점",
       "source": "색채 선호 마커변수",
-      "status": "제안"
+      "status": "제안",
+      "response_format": "동의형"
     },
     {
       "qid": "M3",
@@ -638,7 +732,8 @@
       "item_ko": "물건을 고를 때 파란색 제품에 먼저 눈이 간다.",
       "scoring": "정채점",
       "source": "색채 선호 마커변수",
-      "status": "제안"
+      "status": "제안",
+      "response_format": "동의형"
     },
     {
       "qid": "D8",
@@ -649,7 +744,8 @@
       "item_ko": "귀하가 근무하시는 소방서와 119안전센터를 적어 주십시오. (집단 단위 분석에만 사용하며 개인은 식별되지 않습니다) 소방서: ______   센터/구조대/구급대: ______",
       "scoring": "범주형",
       "source": "ICC(1)/ICC(2) 산출용 집단 식별자",
-      "status": "제안"
+      "status": "제안",
+      "response_format": "동의형"
     },
     {
       "qid": "Q5b",
@@ -660,7 +756,8 @@
       "item_ko": "위 경력을 연 단위로 적어 주십시오.  ( ____ )년 ( ____ )개월",
       "scoring": "연속형",
       "source": "절단점 민감도 분석용",
-      "status": "제안"
+      "status": "제안",
+      "response_format": "동의형"
     },
     {
       "qid": "R1",
@@ -672,7 +769,8 @@
       "pair": "Q14 노력한다면 대부분의 사람은 자기 일을 잘 해낼 수 있다",
       "scoring": "역채점",
       "status": "제안",
-      "우선순위": "필수"
+      "우선순위": "필수",
+      "response_format": "동의형"
     },
     {
       "qid": "R2",
@@ -684,7 +782,8 @@
       "pair": "Q22 직원은 생각하는 것보다 조직안에서 상사에게 더 큰 영향력을 행사할 수 있다",
       "scoring": "역채점",
       "status": "제안",
-      "우선순위": "필수"
+      "우선순위": "필수",
+      "response_format": "동의형"
     },
     {
       "qid": "R3",
@@ -696,7 +795,8 @@
       "pair": "Q16 승진은 대체로 행운의 문제이다",
       "scoring": "역채점",
       "status": "제안",
-      "우선순위": "필수"
+      "우선순위": "필수",
+      "response_format": "동의형"
     },
     {
       "qid": "R4",
@@ -708,7 +808,8 @@
       "pair": "Q17 좋은 일자리를 얻으려면 무엇을 아는가 보다 누구를 아는가가 더 중요하다",
       "scoring": "역채점",
       "status": "제안",
-      "우선순위": "필수"
+      "우선순위": "필수",
+      "response_format": "동의형"
     },
     {
       "qid": "R5",
@@ -720,7 +821,8 @@
       "pair": "Q34 우리 조직에서는 실수를 숨기기보다 공유하는 것이 권장된다",
       "scoring": "역채점",
       "status": "제안",
-      "우선순위": "권장"
+      "우선순위": "권장",
+      "response_format": "동의형"
     },
     {
       "qid": "R6",
@@ -732,7 +834,8 @@
       "pair": "Q41 실수는 개인을 처벌하기보다 조직을 개선하는 기회로 활용된다",
       "scoring": "역채점",
       "status": "제안",
-      "우선순위": "권장"
+      "우선순위": "권장",
+      "response_format": "동의형"
     },
     {
       "qid": "R7",
@@ -744,10 +847,12 @@
       "pair": "Q32 나는 상사가 나의 수행을 잘못했다고 평가할 만한 때에도 피드백을 요청한다",
       "scoring": "역채점",
       "status": "제안",
-      "우선순위": "선택"
+      "우선순위": "선택",
+      "response_format": "동의형"
     }
   ],
   "n_proposed": 12,
   "note": "items = 교수님 검토 완료 확정본 46문항(+Q5). proposed_items = 배포 전 추가 검토 중인 문항. docs/06_교수님_재승인_안건.md 참조.",
-  "source_note": "한국어 문항은 xlsx 시트⑦(설문번호순 전체문항)이 확정본이다. 시트②(통제위치)에는 수정 전 문구가 남아 있으므로 참조하지 말 것 — 시트②는 영문 원문 대조용으로만 쓴다."
+  "source_note": "한국어 문항은 xlsx 시트⑦(설문번호순 전체문항)이 확정본이다. 시트②(통제위치)에는 수정 전 문구가 남아 있으므로 참조하지 말 것 — 시트②는 영문 원문 대조용으로만 쓴다.",
+  "response_format_note": "안전시민행동(SCB) 12문항은 원척도(Hofmann et al., 2003)에 맞추어 빈도형 5점으로 측정한다. 나머지 척도는 동의형 5점을 유지한다. 척도 간 응답형식을 달리하는 것은 모든 문항을 같은 방식으로 답할 때 생기는 인공적 상관을 줄이는 절차적 장치이기도 하다. (연구자 결정 2026-09-16 · 교수님 확인 요망)"
 }
