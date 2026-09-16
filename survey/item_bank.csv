@@ -6,14 +6,14 @@ Q11,LOC,통제위치,internal,내적통제위치,"If employees are unhappy with 
 Q12,LOC,통제위치,external,외적통제위치,Getting the job you want is mostly a matter of luck.,원하는 업무(자리)를 얻는 것은 대부분 운의 문제이다.,정채점,Spector (1988) WLCS,5,확정
 Q13,LOC,통제위치,external,외적통제위치,Making money is primarily a matter of good fortune.,돈을 버는 것은 주로 행운(재수)의 문제이다.,정채점,Spector (1988) WLCS,6,확정
 Q14,LOC,통제위치,internal,내적통제위치,Most people are capable of doing their jobs well if they make the effort.,노력한다면 대부분의 사람은 자기 일을 잘 해낼 수 있다.,정채점,Spector (1988) WLCS,7,확정
-Q15,LOC,통제위치,external,외적통제위치,"In order to get a really good job, you need to have family members or friends in high places.",정말 좋은 직장(자리)을 얻으려면 고위 인사와 아는 사이(배경)가 되어야 한다.,정채점,Spector (1988) WLCS,8,확정
+Q15,LOC,통제위치,external,외적통제위치,"In order to get a really good job, you need to have family members or friends in high places.",정말 좋은 일자리를 얻으려면 고위 인사와 아는 사이가 되어야 한다.,정채점,Spector (1988) WLCS,8,확정
 Q16,LOC,통제위치,external,외적통제위치,Promotions are usually a matter of good fortune.,승진은 대체로 행운의 문제이다.,정채점,Spector (1988) WLCS,9,확정
-Q17,LOC,통제위치,external,외적통제위치,"When it comes to landing a really good job, who you know is more important than what you know.",좋은 직장(자리)을 얻는 데는 무엇을 아느냐(실력)보다 누구를 아느냐(인맥)가 더 중요하다.,정채점,Spector (1988) WLCS,10,확정
+Q17,LOC,통제위치,external,외적통제위치,"When it comes to landing a really good job, who you know is more important than what you know.",좋은 일자리를 얻으려면 무엇을 아는가 보다 누구를 아는가가 더 중요하다.,정채점,Spector (1988) WLCS,10,확정
 Q18,LOC,통제위치,internal,내적통제위치,Promotions are given to employees who perform well on the job.,승진은 직무를 잘 수행하는 구성원에게 주어진다.,정채점,Spector (1988) WLCS,11,확정
-Q19,LOC,통제위치,external,외적통제위치,To make a lot of money you have to know the right people.,큰돈을 버는 것은 옳은 사람(인맥)을 알고 있어야 가능하다.,정채점,Spector (1988) WLCS,12,확정
-Q20,LOC,통제위치,external,외적통제위치,It takes a lot of luck to be an outstanding employee on most jobs.,대부분의 일에서 뛰어난 구성원이 되기는 많은 운이 필요하다.,정채점,Spector (1988) WLCS,13,확정
+Q19,LOC,통제위치,external,외적통제위치,To make a lot of money you have to know the right people.,큰돈을 버는 것은 적합한 인맥이 있어야 가능하다.,정채점,Spector (1988) WLCS,12,확정
+Q20,LOC,통제위치,external,외적통제위치,It takes a lot of luck to be an outstanding employee on most jobs.,일에서 뛰어난 직원이 되는 것은 많은 운이 필요하다.,정채점,Spector (1988) WLCS,13,확정
 Q21,LOC,통제위치,internal,내적통제위치,People who perform their jobs well generally get rewarded.,일을 잘 수행하는 사람들은 대체로 그에 상응하는 보상을 받는다.,정채점,Spector (1988) WLCS,14,확정
-Q22,LOC,통제위치,internal,내적통제위치,Most employees have more influence on their supervisors than they think they do.,대부분의 구성원은 생각하는 것보다 상사에게 더 큰 영향력을 행사할 수 있다.,정채점,Spector (1988) WLCS,15,확정
+Q22,LOC,통제위치,internal,내적통제위치,Most employees have more influence on their supervisors than they think they do.,직원은 생각하는 것보다 조직안에서 상사에게 더 큰 영향력을 행사할 수 있다.,정채점,Spector (1988) WLCS,15,확정
 Q23,LOC,통제위치,external,외적통제위치,The main difference between people who make a lot of money and people who make a little money is luck.,돈을 많이 버는 사람과 적게 버는 사람의 주된 차이는 운이다.,정채점,Spector (1988) WLCS,16,확정
 Q24,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 잘 수행한 업무에 대해 상사의 평가를 적극적으로 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
 Q25,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 내가 잘한 일이 무엇인지 알기 위해 상사에게 질문한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
