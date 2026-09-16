@@ -196,10 +196,10 @@ def build(shuffle: bool = False, seed: int = 20260914,
             out.append(SCALE_ANCHOR.get(key, LIKERT))
             out.append("\n")
             for idx, it in enumerate(block, 1):
-                # 역문항 식별자(R1 등)가 그대로 보이면 응답자가 의식하게 되므로
-                # 역문항이 들어 있는 블록은 일련번호로 표시한다.
-                has_rev = any(x.get("scoring") == "역채점" for x in block)
-                label = f"{idx}" if has_rev else it["qid"][1:]
+                # 문항 식별자(R1, Q54 등)를 그대로 노출하면 응답자가 역문항이나
+                # 추가 문항을 의식하게 되므로, 모든 척도 블록을 일련번호로 표시한다.
+                # 식별자와 설문 표시번호의 대응은 survey/item_bank.json 이 관리한다.
+                label = f"{idx}"
                 out.append(f"**{label}.** {it['item_ko']}\n")
                 out.append("　① ② ③ ④ ⑤\n\n")
             if key in ATTN:
