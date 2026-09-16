@@ -35,9 +35,11 @@ CONSENT = """\
 
 - 본 설문에는 **옳고 그른 답이 없습니다.** 평소 느끼시는 대로 솔직하게 응답해 주시면 됩니다.
 - 응답 내용은 **통계법 제33조**에 따라 익명으로 처리되며, **연구 목적 외에는 사용되지 않습니다.**
-- 개인을 식별할 수 있는 정보는 수집하지 않습니다.
+- 성명·연락처 등 **개인을 식별할 수 있는 정보는 수집하지 않습니다.**
+- 소속(소방서·센터)을 여쭙는 문항이 있으나, 이는 **집단 단위 통계 분석에만** 사용되며
+  개인이나 특정 관서를 식별하는 데 사용되지 않습니다.
 - 참여는 자발적이며, 응답 도중 언제든지 중단하실 수 있습니다.
-- 소요 시간은 약 **10~12분**입니다.
+- 소요 시간은 약 **12~15분**입니다.
 
 바쁘신 중에도 시간을 내어 주셔서 진심으로 감사드립니다.
 
@@ -57,6 +59,8 @@ DEMOGRAPHICS = """\
 **Q2.** 귀하의 연령은?
 　① 20대　② 30대　③ 40대　④ 50대 이상
 
+**Q2-1.** 만 ( ______ )세
+
 **Q3.** 귀하의 계급은?
 　① 소방사　② 소방교　③ 소방장　④ 소방위　⑤ 소방경 이상
 
@@ -66,13 +70,34 @@ DEMOGRAPHICS = """\
 **Q5.** 귀하의 소방 분야 **총 근무경력**은 얼마입니까?
 　① 5년 이하　② 6년 ~ 15년　③ 16년 이상
 
+**Q5-1.** 위 경력을 연 단위로 적어 주십시오.　( ______ )년 ( ______ )개월
+
 **Q6.** 귀하의 현재 근무 형태는?
 　① 3교대　② 2교대　③ 일근(주간)　④ 기타( 　　　　　 )
 
 **Q7.** 최근 1년간 귀하의 **월평균 출동 횟수**는?
 　① 10회 미만　② 10~29회　③ 30~49회　④ 50회 이상
 
+**Q7-1.** 귀하가 근무하시는 소방서와 119안전센터(또는 구조대·구급대)를 적어 주십시오.
+　　소방서: ____________________　　센터/대: ____________________
+
+> 이 항목은 **집단 단위 통계 분석에만** 사용되며, 개인을 특정하는 데 사용되지 않습니다.
+
 ---
+"""
+
+# 주의점검 문항 — 불성실 응답 선별용. 분석 문항이 아니다.
+ATTN = {
+    "LOC": ("AC1", "이 문항은 응답 성실도를 확인하기 위한 것입니다. **③에 표시**해 주십시오."),
+    "EMC": ("AC2", "이 문항은 응답 성실도를 확인하기 위한 것입니다. **①에 표시**해 주십시오."),
+}
+
+# 마커변수 — 공통방법편향 통계적 보정용. 연구 주제와 무관해야 한다.
+MARKER_SECTION = """\
+## Ⅵ. 일반적인 선호
+
+마지막으로, 일상적인 선호에 관한 문항입니다.
+
 """
 
 LIKERT = """\
@@ -158,6 +183,10 @@ def build(shuffle: bool = False, seed: int = 20260914,
             for n, it in enumerate(block, 1):
                 out.append(f"**{n}.** {it['item_ko']}\n")
                 out.append("　① ② ③ ④ ⑤\n\n")
+            if key in ATTN:
+                aid, atxt = ATTN[key]
+                out.append(f"**{aid}.** {atxt}\n")
+                out.append("　① ② ③ ④ ⑤\n\n")
             out.append("---\n\n")
     else:
         for key, heading, lead in SECTIONS:
@@ -168,6 +197,10 @@ def build(shuffle: bool = False, seed: int = 20260914,
             out.append("\n")
             for it in block:
                 out.append(f"**{it['qid'][1:]}.** {it['item_ko']}\n")
+                out.append("　① ② ③ ④ ⑤\n\n")
+            if key in ATTN:
+                aid, atxt = ATTN[key]
+                out.append(f"**{aid}.** {atxt}\n")
                 out.append("　① ② ③ ④ ⑤\n\n")
             out.append("---\n\n")
 
@@ -205,12 +238,24 @@ def build(shuffle: bool = False, seed: int = 20260914,
                        "의도적으로 연구 주제와 동떨어진 내용으로 구성되었습니다.\n\n")
             out.append("---\n\n")
 
+    markers_all = bank.get("administered_extra", [])
+    markers_all = [i for i in markers_all if i["var"] == "MARKER"]
+    if markers_all:
+        out.append(MARKER_SECTION)
+        out.append(LIKERT)
+        out.append("\n")
+        for it in markers_all:
+            out.append(f"**{it['qid']}.** {it['item_ko']}\n")
+            out.append("　① ② ③ ④ ⑤\n\n")
+        out.append("---\n\n")
+
     out.append("## 설문이 끝났습니다\n\n")
     out.append("응답해 주셔서 진심으로 감사드립니다.\n")
     out.append("귀하의 소중한 의견은 소방공무원의 현장 안전을 높이는 연구 자료로 활용하겠습니다.\n\n")
     out.append("---\n\n")
     out.append(
-        f"<sub>총 척도 {len(items)}문항 + 일반적 사항 7문항 · "
+        f"<sub>연구 변수 {len(items)}문항 + 일반적 사항 7문항(+연속형 2·소속 1) "
+        "+ 주의점검 2 + 마커변수 3 · "
         "통제위치·피드백추구·실책관리풍토는 5점 동의형, "
         "안전시민행동은 5점 빈도형 · "
         "`survey/item_bank.json` 에서 자동 생성</sub>\n")
