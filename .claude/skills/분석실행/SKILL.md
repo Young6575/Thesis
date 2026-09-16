@@ -27,7 +27,7 @@ description: 수집된 설문 자료로 R 분석을 실행하고 APA 형식 표�
 # 03_cfa.R       측정모형 CFA — ★ WLCS 는 1·2·3요인 경쟁모형 비교 필수
 # 04_reliab.R    α, 복합신뢰도(CR), AVE
 # 05_validity.R  판별타당도 (Fornell-Larcker, HTMT)
-# 06_cmv.R       공통방법편향 (Harman, 마커변수 있으면 CFA marker)
+# 06_cmv.R       공통방법편향 (Harman 단일요인 검정. 마커변수는 미채택이므로 없음)
 # 07_corr.R      기술통계·상관 (4.2절)
 # 08_sem.R       구조모형, 매개 부트스트랩 5,000회
 # 09_modmed.R    조절·조절된 매개 (Model 14), 조절매개지수

@@ -11,7 +11,7 @@ item_bank.json 을 단일 원천(single source of truth)으로 삼아
     --shuffle   척도 문항을 변수 블록 없이 무작위 배치 (공통방법편향 완화용)
                 재현성을 위해 --seed 로 난수 시드를 고정한다.
     --with-proposed
-                교수님 검토 대기 중인 제안 문항(마커변수·소속코드·경력 연속형)을
+                교수님 검토 대기 중인 제안 문항을
                 포함한 검토용 설문지를 생성한다. 확정본에는 포함되지 않는다.
 """
 import argparse
@@ -91,14 +91,6 @@ ATTN = {
     "LOC": ("AC1", "이 문항은 응답 성실도를 확인하기 위한 것입니다. **③에 표시**해 주십시오."),
     "EMC": ("AC2", "이 문항은 응답 성실도를 확인하기 위한 것입니다. **①에 표시**해 주십시오."),
 }
-
-# 마커변수 — 공통방법편향 통계적 보정용. 연구 주제와 무관해야 한다.
-MARKER_SECTION = """\
-## Ⅵ. 일반적인 선호
-
-마지막으로, 일상적인 선호에 관한 문항입니다.
-
-"""
 
 LIKERT = """\
 > **응답 방법**  다음 문항들을 읽고 평소 생각과 가장 가까운 곳에 표시해 주십시오.
@@ -228,38 +220,15 @@ def build(shuffle: bool = False, seed: int = 20260914,
                 out.append(f"　① ② ③ ④ ⑤　　<sub>↔ 짝: {it.get('pair','')}</sub>\n\n")
             out.append("---\n\n")
 
-        markers = [i for i in proposed if i["var"] == "MARKER"]
-        if markers:
-            out.append("## 〔제안〕 Ⅵ. 일반적인 선호\n")
-            out.append("다음은 일상적인 선호를 묻는 문항입니다.\n\n")
-            out.append(LIKERT)
-            out.append("\n")
-            for it in markers:
-                out.append(f"**{it['qid']}.** {it['item_ko']}\n")
-                out.append("　① ② ③ ④ ⑤\n\n")
-            out.append("> 이 문항들은 공통방법편향(CMV)의 통계적 통제를 위한 "
-                       "**마커변수**입니다. 연구 변수와 이론적으로 무관해야 하므로 "
-                       "의도적으로 연구 주제와 동떨어진 내용으로 구성되었습니다.\n\n")
-            out.append("---\n\n")
-
-    markers_all = bank.get("administered_extra", [])
-    markers_all = [i for i in markers_all if i["var"] == "MARKER"]
-    if markers_all:
-        out.append(MARKER_SECTION)
-        out.append(LIKERT)
-        out.append("\n")
-        for it in markers_all:
-            out.append(f"**{it['qid']}.** {it['item_ko']}\n")
-            out.append("　① ② ③ ④ ⑤\n\n")
-        out.append("---\n\n")
-
     out.append("## 설문이 끝났습니다\n\n")
     out.append("응답해 주셔서 진심으로 감사드립니다.\n")
     out.append("귀하의 소중한 의견은 소방공무원의 현장 안전을 높이는 연구 자료로 활용하겠습니다.\n\n")
     out.append("---\n\n")
+    n_attn = len([i for i in bank.get("administered_extra", [])
+                  if i.get("var") == "ATTN"])
     out.append(
         f"<sub>연구 변수 {len(items)}문항 + 일반적 사항 7문항(+연속형 2·소속 1) "
-        "+ 주의점검 2 + 마커변수 3 · "
+        f"+ 주의점검 {n_attn} · "
         "통제위치·피드백추구·실책관리풍토는 5점 동의형, "
         "안전시민행동은 5점 빈도형 · "
         "`survey/item_bank.json` 에서 자동 생성</sub>\n")
