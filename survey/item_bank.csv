@@ -1,47 +1,51 @@
-﻿qid,var,var_ko,sub,sub_ko,item_en,item_ko,scoring,source,orig_no,status
-Q8,LOC,통제위치,internal,내적통제위치,A job is what you make of it.,직장(일)이란 결국 자신이 만들어가는 것이다.,정채점,Spector (1988) WLCS,1,확정
-Q9,LOC,통제위치,internal,내적통제위치,"On most jobs, people can pretty much accomplish whatever they set out to accomplish.",대부분의 일에서 사람들은 하고자 하는 일을 충분히 해낼 수 있다.,정채점,Spector (1988) WLCS,2,확정
-Q10,LOC,통제위치,internal,내적통제위치,"If you know what you want out of a job, you can find a job that gives it to you.","일에서 무엇을 원하는지 알고 있다면, 그것을 실현할 수 있는 일을 찾을 수 있다.",정채점,Spector (1988) WLCS,3,확정
-Q11,LOC,통제위치,internal,내적통제위치,"If employees are unhappy with a decision made by their boss, they should do something about it.","상사의 결정이 마음에 들지 않을 때, 구성원은 그것을 바꾸기 위해 무언가 노력해야 한다.",정채점,Spector (1988) WLCS,4,확정
-Q12,LOC,통제위치,external,외적통제위치,Getting the job you want is mostly a matter of luck.,원하는 업무(자리)를 얻는 것은 대부분 운의 문제이다.,정채점,Spector (1988) WLCS,5,확정
-Q13,LOC,통제위치,external,외적통제위치,Making money is primarily a matter of good fortune.,돈을 버는 것은 주로 행운(재수)의 문제이다.,정채점,Spector (1988) WLCS,6,확정
-Q14,LOC,통제위치,internal,내적통제위치,Most people are capable of doing their jobs well if they make the effort.,노력한다면 대부분의 사람은 자기 일을 잘 해낼 수 있다.,정채점,Spector (1988) WLCS,7,확정
-Q15,LOC,통제위치,external,외적통제위치,"In order to get a really good job, you need to have family members or friends in high places.",정말 좋은 일자리를 얻으려면 고위 인사와 아는 사이가 되어야 한다.,정채점,Spector (1988) WLCS,8,확정
-Q16,LOC,통제위치,external,외적통제위치,Promotions are usually a matter of good fortune.,승진은 대체로 행운의 문제이다.,정채점,Spector (1988) WLCS,9,확정
-Q17,LOC,통제위치,external,외적통제위치,"When it comes to landing a really good job, who you know is more important than what you know.",좋은 일자리를 얻으려면 무엇을 아는가 보다 누구를 아는가가 더 중요하다.,정채점,Spector (1988) WLCS,10,확정
-Q18,LOC,통제위치,internal,내적통제위치,Promotions are given to employees who perform well on the job.,승진은 직무를 잘 수행하는 구성원에게 주어진다.,정채점,Spector (1988) WLCS,11,확정
-Q19,LOC,통제위치,external,외적통제위치,To make a lot of money you have to know the right people.,큰돈을 버는 것은 적합한 인맥이 있어야 가능하다.,정채점,Spector (1988) WLCS,12,확정
-Q20,LOC,통제위치,external,외적통제위치,It takes a lot of luck to be an outstanding employee on most jobs.,일에서 뛰어난 직원이 되는 것은 많은 운이 필요하다.,정채점,Spector (1988) WLCS,13,확정
-Q21,LOC,통제위치,internal,내적통제위치,People who perform their jobs well generally get rewarded.,일을 잘 수행하는 사람들은 대체로 그에 상응하는 보상을 받는다.,정채점,Spector (1988) WLCS,14,확정
-Q22,LOC,통제위치,internal,내적통제위치,Most employees have more influence on their supervisors than they think they do.,직원은 생각하는 것보다 조직안에서 상사에게 더 큰 영향력을 행사할 수 있다.,정채점,Spector (1988) WLCS,15,확정
-Q23,LOC,통제위치,external,외적통제위치,The main difference between people who make a lot of money and people who make a little money is luck.,돈을 많이 버는 사람과 적게 버는 사람의 주된 차이는 운이다.,정채점,Spector (1988) WLCS,16,확정
-Q24,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 잘 수행한 업무에 대해 상사의 평가를 적극적으로 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q25,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 내가 잘한 일이 무엇인지 알기 위해 상사에게 질문한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q26,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 업무 수행 능력을 인정받기 위해 상사의 피드백을 구한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q27,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 상사가 나의 수행을 잘했다고 평가할 만한 때에 피드백을 요청한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q28,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 칭찬이나 인정을 들을 기회가 있다면 기꺼이 상사에게 먼저 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q29,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 내 업무의 부족하거나 미흡한 부분에 대해 상사에게 적극적으로 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q30,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 개선이 필요한 부분을 알기 위해 상사에게 비판적인 평가를 요청한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q31,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 실수를 저질렀다고 생각될 때 그 원인에 대해 상사로부터 솔직한 피드백을 구한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q32,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 상사가 나의 수행을 잘못했다고 평가할 만한 때에도 피드백을 요청한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q33,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 잘못된 점을 바로잡기 위해 들기 불편한 피드백이라도 먼저 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정
-Q34,EMC,실책관리풍토,single,단일차원,,우리 조직에서는 실수를 숨기기보다 공유하는 것이 권장된다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 공유,확정
-Q35,EMC,실책관리풍토,single,단일차원,,실수가 발생하면 이를 통해 배우려는 분위기가 형성되어 있다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 학습,확정
-Q36,EMC,실책관리풍토,single,단일차원,,실수는 비난보다 문제해결의 기회로 받아들여진다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 활용,확정
-Q37,EMC,실책관리풍토,single,단일차원,,구성원들은 자신의 실수를 자유롭게 보고한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 보고,확정
-Q38,EMC,실책관리풍토,single,단일차원,,실수의 원인을 함께 분석하고 개선하려고 노력한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 분석,확정
-Q39,EMC,실책관리풍토,single,단일차원,,실수 경험을 다른 구성원들과 공유한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 공유,확정
-Q40,EMC,실책관리풍토,single,단일차원,,실수를 반복하지 않도록 조직 차원의 피드백이 제공된다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",조직 피드백,확정
-Q41,EMC,실책관리풍토,single,단일차원,,실수를 개인을 처벌하기보다 조직을 개선하는 기회로 활용한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 활용,확정
-Q42,SCB,안전시민행동,Helping,지원,,나는 안전하게 일하지 않는 동료가 위험한 상황에 처하지 않도록 조치한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Helping (6문항 중),확정
-Q43,SCB,안전시민행동,Helping,지원,,나는 안전과 관련된 일에서 동료를 적극적으로 돕는다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Helping (6문항 중),확정
-Q44,SCB,안전시민행동,Voice,발언,,나는 안전 문제에 대한 나의 의견이나 우려를 표명한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Voice (4문항 중),확정
-Q45,SCB,안전시민행동,Voice,발언,,나는 업무 활동의 안전성에 대해 동료들에게 권고를 한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Voice (4문항 중),확정
-Q46,SCB,안전시민행동,Stewardship,자원참여,,나는 안전위원회 등 조직의 안전 관련 활동에 자발적으로 참여한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Stewardship (5문항 중),확정
-Q47,SCB,안전시민행동,Stewardship,자원참여,,나는 조직의 안전 활동에 기여할 기회가 있으면 스스로 나선다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Stewardship (5문항 중),확정
-Q48,SCB,안전시민행동,Whistleblowing,보고,,나는 동료의 위험한 행동이나 안전 규정 위반을 목격하면 보고한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Whistleblowing (5문항 중),확정
-Q49,SCB,안전시민행동,Whistleblowing,보고,,나는 잠재적 안전 위험 요소를 발견하면 관계자(지휘관·안전관리부서)에게 알린다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Whistleblowing (5문항 중),확정
-Q50,SCB,안전시민행동,Civic Virtue,시민의식,,나는 안전 회의나 안전 교육에 적극적으로 참석하고 참여한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Civic Virtue (3문항 중),확정
-Q51,SCB,안전시민행동,Civic Virtue,시민의식,,나는 조직의 안전에 관한 논의에 관심을 갖고 의견을 낸다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Civic Virtue (3문항 중),확정
-Q52,SCB,안전시민행동,Initiating Change,변화주도,,나는 업무 절차가 더 안전해지도록 개선을 시도한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Init. Change (4문항 중),확정
-Q53,SCB,안전시민행동,Initiating Change,변화주도,,나는 안전을 위해 기존 관행을 바꿀 필요가 있다고 판단되면 먼저 행동에 나선다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Init. Change (4문항 중),확정
+﻿qid,var,var_ko,sub,sub_ko,item_en,item_ko,scoring,source,orig_no,status,response_format,anchors,pair,item_ko_이전
+Q8,LOC,통제위치,internal,내적통제위치,A job is what you make of it.,직장(일)이란 결국 자신이 만들어가는 것이다.,정채점,Spector (1988) WLCS,1,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q9,LOC,통제위치,internal,내적통제위치,"On most jobs, people can pretty much accomplish whatever they set out to accomplish.",대부분의 일에서 사람들은 하고자 하는 일을 충분히 해낼 수 있다.,정채점,Spector (1988) WLCS,2,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q10,LOC,통제위치,internal,내적통제위치,"If you know what you want out of a job, you can find a job that gives it to you.","일에서 무엇을 원하는지 알고 있다면, 그것을 실현할 수 있는 일을 찾을 수 있다.",정채점,Spector (1988) WLCS,3,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q11,LOC,통제위치,internal,내적통제위치,"If employees are unhappy with a decision made by their boss, they should do something about it.","상사의 결정이 마음에 들지 않을 때, 구성원은 그것을 바꾸기 위해 무언가 노력해야 한다.",정채점,Spector (1988) WLCS,4,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+R1,LOC,통제위치,internal,내적통제위치,(역방향 진술 — 원척도에 없는 추가 문항),아무리 노력해도 업무 성과를 스스로 바꾸기는 어렵다.,역채점,본 연구 추가 (역방향 진술),,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,Q14 노력한다면 대부분의 사람은 자기 일을 잘 해낼 수 있다,
+Q12,LOC,통제위치,external,외적통제위치,Getting the job you want is mostly a matter of luck.,원하는 업무(자리)를 얻는 것은 대부분 운의 문제이다.,정채점,Spector (1988) WLCS,5,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q13,LOC,통제위치,external,외적통제위치,Making money is primarily a matter of good fortune.,돈을 버는 것은 주로 행운(재수)의 문제이다.,정채점,Spector (1988) WLCS,6,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q14,LOC,통제위치,internal,내적통제위치,Most people are capable of doing their jobs well if they make the effort.,노력한다면 대부분의 사람은 자기 일을 잘 해낼 수 있다.,정채점,Spector (1988) WLCS,7,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+R2,LOC,통제위치,internal,내적통제위치,(역방향 진술 — 원척도에 없는 추가 문항),구성원이 상사의 결정에 영향을 미치기는 어렵다.,역채점,본 연구 추가 (역방향 진술),,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,Q22 직원은 생각하는 것보다 조직안에서 상사에게 더 큰 영향력을 행사할 수 있다,
+Q15,LOC,통제위치,external,외적통제위치,"In order to get a really good job, you need to have family members or friends in high places.",정말 좋은 일자리를 얻으려면 고위 인사와 아는 사이가 되어야 한다.,정채점,Spector (1988) WLCS,8,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,정말 좋은 직장(자리)을 얻으려면 고위 인사와 아는 사이(배경)가 되어야 한다.
+Q16,LOC,통제위치,external,외적통제위치,Promotions are usually a matter of good fortune.,승진은 대체로 행운의 문제이다.,정채점,Spector (1988) WLCS,9,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q17,LOC,통제위치,external,외적통제위치,"When it comes to landing a really good job, who you know is more important than what you know.",좋은 일자리를 얻으려면 무엇을 아는가 보다 누구를 아는가가 더 중요하다.,정채점,Spector (1988) WLCS,10,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,좋은 직장(자리)을 얻는 데는 무엇을 아느냐(실력)보다 누구를 아느냐(인맥)가 더 중요하다.
+Q18,LOC,통제위치,internal,내적통제위치,Promotions are given to employees who perform well on the job.,승진은 직무를 잘 수행하는 구성원에게 주어진다.,정채점,Spector (1988) WLCS,11,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+R3,LOC,통제위치,external,외적통제위치,(역방향 진술 — 원척도에 없는 추가 문항),승진이 운에 좌우되는 경우는 드물다.,역채점,본 연구 추가 (역방향 진술),,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,Q16 승진은 대체로 행운의 문제이다,
+Q19,LOC,통제위치,external,외적통제위치,To make a lot of money you have to know the right people.,큰돈을 버는 것은 적합한 인맥이 있어야 가능하다.,정채점,Spector (1988) WLCS,12,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,큰돈을 버는 것은 옳은 사람(인맥)을 알고 있어야 가능하다.
+Q20,LOC,통제위치,external,외적통제위치,It takes a lot of luck to be an outstanding employee on most jobs.,일에서 뛰어난 직원이 되는 것은 많은 운이 필요하다.,정채점,Spector (1988) WLCS,13,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,대부분의 일에서 뛰어난 구성원이 되기는 많은 운이 필요하다.
+Q21,LOC,통제위치,internal,내적통제위치,People who perform their jobs well generally get rewarded.,일을 잘 수행하는 사람들은 대체로 그에 상응하는 보상을 받는다.,정채점,Spector (1988) WLCS,14,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+R4,LOC,통제위치,external,외적통제위치,(역방향 진술 — 원척도에 없는 추가 문항),좋은 자리를 얻는 데 인맥이 결정적인 것은 아니다.,역채점,본 연구 추가 (역방향 진술),,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,Q17 좋은 일자리를 얻으려면 무엇을 아는가 보다 누구를 아는가가 더 중요하다,
+Q22,LOC,통제위치,internal,내적통제위치,Most employees have more influence on their supervisors than they think they do.,직원은 생각하는 것보다 조직안에서 상사에게 더 큰 영향력을 행사할 수 있다.,정채점,Spector (1988) WLCS,15,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,대부분의 구성원은 생각하는 것보다 상사에게 더 큰 영향력을 행사할 수 있다.
+Q23,LOC,통제위치,external,외적통제위치,The main difference between people who make a lot of money and people who make a little money is luck.,돈을 많이 버는 사람과 적게 버는 사람의 주된 차이는 운이다.,정채점,Spector (1988) WLCS,16,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q24,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 잘 수행한 업무에 대해 상사의 평가를 적극적으로 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q25,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 내가 잘한 일이 무엇인지 알기 위해 상사에게 질문한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q26,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 업무 수행 능력을 인정받기 위해 상사의 피드백을 구한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q27,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 상사가 나의 수행을 잘했다고 평가할 만한 때에 피드백을 요청한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q28,FSB,피드백추구행동,positive,긍정적 피드백 추구,,나는 칭찬이나 인정을 들을 기회가 있다면 기꺼이 상사에게 먼저 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q29,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 내 업무의 부족하거나 미흡한 부분에 대해 상사에게 적극적으로 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q30,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 개선이 필요한 부분을 알기 위해 상사에게 비판적인 평가를 요청한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q31,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 실수를 저질렀다고 생각될 때 그 원인에 대해 상사로부터 솔직한 피드백을 구한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q32,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 상사가 나의 수행을 잘못했다고 평가할 만한 때에도 피드백을 요청한다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q33,FSB,피드백추구행동,negative,부정적 피드백 추구,,나는 잘못된 점을 바로잡기 위해 들기 불편한 피드백이라도 먼저 물어본다.,정채점,Ashford & Tsui (1991) 기반 수정·보완,,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q34,EMC,실책관리풍토,single,단일차원,,우리 조직에서는 실수를 숨기기보다 공유하는 것이 권장된다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 공유,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q35,EMC,실책관리풍토,single,단일차원,,실수가 발생하면 이를 통해 배우려는 분위기가 형성되어 있다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 학습,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q36,EMC,실책관리풍토,single,단일차원,,실수는 비난보다 문제해결의 기회로 받아들여진다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 활용,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q37,EMC,실책관리풍토,single,단일차원,,구성원들은 자신의 실수를 자유롭게 보고한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 보고,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q38,EMC,실책관리풍토,single,단일차원,,실수의 원인을 함께 분석하고 개선하려고 노력한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 분석,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q39,EMC,실책관리풍토,single,단일차원,,실수 경험을 다른 구성원들과 공유한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 공유,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q40,EMC,실책관리풍토,single,단일차원,,실수를 반복하지 않도록 조직 차원의 피드백이 제공된다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",조직 피드백,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q41,EMC,실책관리풍토,single,단일차원,,실수를 개인을 처벌하기보다 조직을 개선하는 기회로 활용한다.,정채점,"van Dyck, Frese, Baer & Sonnentag (2005) 축약",실책 활용,확정,동의형,① 전혀 그렇지 않다 ② 그렇지 않다 ③ 보통이다 ④ 그렇다 ⑤ 매우 그렇다,,
+Q42,SCB,안전시민행동,Helping,지원,,나는 안전하게 일하지 않는 동료가 위험한 상황에 처하지 않도록 조치한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Helping (6문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q43,SCB,안전시민행동,Helping,지원,,나는 안전과 관련된 일에서 동료를 적극적으로 돕는다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Helping (6문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q44,SCB,안전시민행동,Voice,발언,,나는 안전 문제에 대한 나의 의견이나 우려를 표명한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Voice (4문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q45,SCB,안전시민행동,Voice,발언,,나는 업무 활동의 안전성에 대해 동료들에게 권고를 한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Voice (4문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q46,SCB,안전시민행동,Stewardship,자원참여,,나는 안전위원회 등 조직의 안전 관련 활동에 자발적으로 참여한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Stewardship (5문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q47,SCB,안전시민행동,Stewardship,자원참여,,나는 조직의 안전 활동에 기여할 기회가 있으면 스스로 나선다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Stewardship (5문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q48,SCB,안전시민행동,Whistleblowing,보고,,나는 동료의 위험한 행동이나 안전 규정 위반을 목격하면 보고한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Whistleblowing (5문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q49,SCB,안전시민행동,Whistleblowing,보고,,나는 잠재적 안전 위험 요소를 발견하면 관계자(지휘관·안전관리부서)에게 알린다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Whistleblowing (5문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q50,SCB,안전시민행동,Civic Virtue,시민의식,,나는 안전 회의나 안전 교육에 적극적으로 참석하고 참여한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Civic Virtue (3문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q51,SCB,안전시민행동,Civic Virtue,시민의식,,나는 조직의 안전에 관한 논의에 관심을 갖고 의견을 낸다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Civic Virtue (3문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q52,SCB,안전시민행동,Initiating Change,변화주도,,나는 업무 절차가 더 안전해지도록 개선을 시도한다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Init. Change (4문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,
+Q53,SCB,안전시민행동,Initiating Change,변화주도,,나는 안전을 위해 기존 관행을 바꿀 필요가 있다고 판단되면 먼저 행동에 나선다.,정채점,"Hofmann, Morgeson & Gerras (2003) 기반 수정·보완",Init. Change (4문항 중),확정,빈도형,① 전혀 하지 않는다 ② 드물게 한다 ③ 가끔 한다 ④ 자주 한다 ⑤ 항상 한다,,

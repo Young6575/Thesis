@@ -195,8 +195,11 @@ def build(shuffle: bool = False, seed: int = 20260914,
             out.append(f"{lead}\n\n")
             out.append(SCALE_ANCHOR.get(key, LIKERT))
             out.append("\n")
-            for it in block:
-                out.append(f"**{it['qid'][1:]}.** {it['item_ko']}\n")
+            for idx, it in enumerate(block, 1):
+                # 역문항 번호(R1 등)가 그대로 보이면 응답자가 의식하게 되므로
+                # 통제위치 블록은 일련번호로 표시한다. 나머지는 설문번호 그대로.
+                label = f"{idx}" if key == "LOC" else it["qid"][1:]
+                out.append(f"**{label}.** {it['item_ko']}\n")
                 out.append("　① ② ③ ④ ⑤\n\n")
             if key in ATTN:
                 aid, atxt = ATTN[key]
