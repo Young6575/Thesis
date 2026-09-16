@@ -157,6 +157,25 @@ def build(shuffle: bool = False, seed: int = 20260914,
             out.append("---\n\n")
 
     if proposed:
+        # 역문항은 해당 척도 블록 끝에 붙는 것이 자연스럽지만,
+        # 검토용에서는 교수님이 한눈에 보시도록 따로 모아 표시한다.
+        revs = [i for i in proposed if i["var"] == "REV"]
+        if revs:
+            out.append("## 〔제안〕 역방향 문항\n")
+            out.append("아래는 **역채점** 문항입니다. 실제 배포 시에는 해당 척도 "
+                       "블록 안에 섞어서 배치합니다.\n\n")
+            out.append(LIKERT)
+            out.append("\n")
+            cur = None
+            for it in revs:
+                if it["sub_ko"] != cur:
+                    cur = it["sub_ko"]
+                    out.append(f"\n**［{cur}］** "
+                               f"({it.get('우선순위','')})\n\n")
+                out.append(f"**{it['qid']}.** {it['item_ko']}\n")
+                out.append(f"　① ② ③ ④ ⑤　　<sub>↔ 짝: {it.get('pair','')}</sub>\n\n")
+            out.append("---\n\n")
+
         markers = [i for i in proposed if i["var"] == "MARKER"]
         if markers:
             out.append("## 〔제안〕 Ⅵ. 일반적인 선호\n")
