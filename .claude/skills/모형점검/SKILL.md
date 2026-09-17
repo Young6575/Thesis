@@ -12,20 +12,34 @@ description: 연구모형·가설·문서 간 정합성을 기계적으로 점�
 
 ```bash
 # ① 가설 라벨 — 정본은 docs/01_연구모형_가설.md
-for f in docs/0[0234]*.md; do
+#    H0 계열(총효과)이 2026-09-16 신설되었다. H5-2 는 방향 미지정으로 강등되고
+#    H5-2a(역U자)·H5-2b(단조 감소)가 탐색적 대안으로 분리되었다.
+for f in docs/0[0-9]*.md docs/논문초고/*.md; do
   printf "%-34s " "$(basename $f)"
   grep -oE "H[1-9]-[0-9][ab]?" "$f" | sort -u | tr '\n' ' '; echo
 done
 
-# ② 문항 수 — 46 + 직무경력 1 = 47 이 전 문서 동일해야 한다
+# ② 문항 수 — 연구 변수 52 (LOC 16 · FSB 10 · EMC 8 · SCB 18) 가 전 문서 동일해야 한다
+#    ⚠️ 역문항(R1~R6)·주의점검(AC1·AC2)·마커변수(M1~M3)는 모두 철회되었다.
+#    평정 문항 = 연구 변수 = 52. 따로 붙는 평정 문항이 없다.
 python3 -c "
-import json; b=json.load(open('survey/item_bank.json'))
+import json, csv, io
 from collections import Counter
-c=Counter(i['var'] for i in b['items'])
-print('item_bank:', dict(c), '합계', sum(c.values()))
-print('제안 문항:', len(b.get('proposed_items',[])))
+b = json.load(io.open('survey/item_bank.json', encoding='utf-8'))
+c = Counter(i['var'] for i in b['items'])
+print('item_bank :', dict(c), '합계', sum(c.values()))
+print('csv       :', len(list(csv.reader(io.open('survey/item_bank.csv', encoding='utf-8-sig')))) - 1)
+print('추가 문항 :', [i['qid'] for i in b['administered_extra']])
+print('제안 문항 :', len(b.get('proposed_items', [])))
+s = io.open('survey/02_설문지_배포본.md', encoding='utf-8').read()
+print('설문지 평정:', s.count('\u3000① ② ③ ④ ⑤'))
+assert sum(c.values()) == 52, '문항 수가 52가 아니다'
 "
-grep -rn "47문항\|46문항\|12문항\|16문항" docs/*.md | head
+# 철회된 것이 되살아나지 않았는지
+grep -rn "R1~R6\|AC1\|마커변수" survey/*.md survey/*.json | grep -v "철회\|미채택" | head
+
+# 옛 문항 수가 남아 있는지
+grep -rn "58문항\|60문항\|63문항\|47문항\|46문항" docs/*.md docs/논문초고/*.md | head
 
 # ③ 변수명 표기 통일 — '지각된 실책관리풍토'
 grep -rc "실책관리풍토" docs/*.md

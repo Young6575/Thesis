@@ -86,12 +86,6 @@ DEMOGRAPHICS = """\
 ---
 """
 
-# 주의점검 문항 — 불성실 응답 선별용. 분석 문항이 아니다.
-ATTN = {
-    "LOC": ("AC1", "이 문항은 응답 성실도를 확인하기 위한 것입니다. **③에 표시**해 주십시오."),
-    "EMC": ("AC2", "이 문항은 응답 성실도를 확인하기 위한 것입니다. **①에 표시**해 주십시오."),
-}
-
 LIKERT = """\
 > **응답 방법**  다음 문항들을 읽고 평소 생각과 가장 가까운 곳에 표시해 주십시오.
 >
@@ -175,10 +169,6 @@ def build(shuffle: bool = False, seed: int = 20260914,
             for n, it in enumerate(block, 1):
                 out.append(f"**{n}.** {it['item_ko']}\n")
                 out.append("　① ② ③ ④ ⑤\n\n")
-            if key in ATTN:
-                aid, atxt = ATTN[key]
-                out.append(f"**{aid}.** {atxt}\n")
-                out.append("　① ② ③ ④ ⑤\n\n")
             out.append("---\n\n")
     else:
         for key, heading, lead in SECTIONS:
@@ -188,21 +178,16 @@ def build(shuffle: bool = False, seed: int = 20260914,
             out.append(SCALE_ANCHOR.get(key, LIKERT))
             out.append("\n")
             for idx, it in enumerate(block, 1):
-                # 문항 식별자(R1, Q54 등)를 그대로 노출하면 응답자가 역문항이나
-                # 추가 문항을 의식하게 되므로, 모든 척도 블록을 일련번호로 표시한다.
+                # 문항 식별자(Q54 등)를 그대로 노출하면 응답자가 추가 문항을
+                # 의식하게 되므로, 모든 척도 블록을 일련번호로 표시한다.
                 # 식별자와 설문 표시번호의 대응은 survey/item_bank.json 이 관리한다.
                 label = f"{idx}"
                 out.append(f"**{label}.** {it['item_ko']}\n")
                 out.append("　① ② ③ ④ ⑤\n\n")
-            if key in ATTN:
-                aid, atxt = ATTN[key]
-                out.append(f"**{aid}.** {atxt}\n")
-                out.append("　① ② ③ ④ ⑤\n\n")
             out.append("---\n\n")
 
     if proposed:
-        # 역문항은 해당 척도 블록 끝에 붙는 것이 자연스럽지만,
-        # 검토용에서는 교수님이 한눈에 보시도록 따로 모아 표시한다.
+        # 제안 문항은 검토용에서 교수님이 한눈에 보시도록 따로 모아 표시한다.
         revs = [i for i in proposed if i["var"] == "REV"]
         if revs:
             out.append("## 〔제안〕 역방향 문항\n")
@@ -224,11 +209,8 @@ def build(shuffle: bool = False, seed: int = 20260914,
     out.append("응답해 주셔서 진심으로 감사드립니다.\n")
     out.append("귀하의 소중한 의견은 소방공무원의 현장 안전을 높이는 연구 자료로 활용하겠습니다.\n\n")
     out.append("---\n\n")
-    n_attn = len([i for i in bank.get("administered_extra", [])
-                  if i.get("var") == "ATTN"])
     out.append(
-        f"<sub>연구 변수 {len(items)}문항 + 일반적 사항 7문항(+연속형 2·소속 1) "
-        f"+ 주의점검 {n_attn} · "
+        f"<sub>연구 변수 {len(items)}문항 + 일반적 사항 7문항(+연속형 2·소속 1) · "
         "통제위치·피드백추구·실책관리풍토는 5점 동의형, "
         "안전시민행동은 5점 빈도형 · "
         "`survey/item_bank.json` 에서 자동 생성</sub>\n")
